@@ -1,0 +1,57 @@
+<div class="container">
+  <h4 class="title">Provider App</h4>
+
+  <div class="message-area">
+    <div
+      class="message-area__chat"
+      [ngClass]="{ sendPosition: message.senderId == 1 }"
+      *ngFor="let message of messages"
+    >
+      <mat-card [ngClass]="{ chatColor: message.senderId == 1 }">
+        <mat-card-subtitle [ngClass]="{ alignRight: message.senderId == 1 }">{{
+          message.sentAt | date: "medium"
+        }}</mat-card-subtitle>
+        <mat-card-title>{{ message.body }}</mat-card-title>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="delete-button">
+    <button
+      class="delete-button__btn"
+      mat-flat-button
+      color="warn"
+      aria-label="delete button"
+      (click)="deleteAllMessages()"
+    >
+      <mat-icon>delete</mat-icon>
+      Delete Messages
+    </button>
+  </div>
+
+  <div class="typing-area">
+    <form class="typing-area__input">
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Enter chat</mat-label>
+        <textarea
+          matInput
+          placeholder="Hello..."
+          [(ngModel)]="chatText"
+          [ngModelOptions]="{ standalone: true }"
+        ></textarea>
+      </mat-form-field>
+    </form>
+
+    <div class="typing-area__send">
+      <button
+        mat-fab
+        color="primary"
+        aria-label="send button"
+        [disabled]="!chatText"
+        (click)="sendChat()"
+      >
+        <mat-icon>send</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

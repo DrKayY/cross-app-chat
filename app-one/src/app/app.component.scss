@@ -1,0 +1,89 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  
+    & > * {
+      width: 100%;
+    }
+  }
+  
+  .title {
+    height: 7%;
+    margin: 0;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+    background-color: aqua;
+    text-transform: capitalize;
+  }
+  
+  .message-area {
+    height: 75%;
+    padding: 5px;
+    overflow: auto;
+    box-sizing: border-box;
+  
+    &__chat {
+      margin-bottom: 10px;
+      width: 60%;
+    }
+  }
+  
+  .delete-button {
+      height: 5%;
+      text-align: right;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      &__btn {
+          height: 90%;
+      }
+  }
+  
+  .typing-area {
+    height: 13%;
+    background-color: aliceblue;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  
+    &__input {
+      width: 88%;
+    }
+  
+    &__send {
+      width: 10%;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .sendPosition {
+    margin-left: auto;
+  }
+  
+  .chatColor {
+    color: green;
+    background-color: beige;
+  }
+  
+  .alignRight {
+    text-align: right;
+  }
+  

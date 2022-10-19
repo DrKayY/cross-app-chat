@@ -1,0 +1,12 @@
+.vscode
+.vs
+.config
+/bin
+/obj
+/tessdata
+/Migrations
+*PublishProfiles
+*serviceDependencies*
+*.user
+*.db*
+/Reporter
